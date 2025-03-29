@@ -6,7 +6,7 @@ deep_sort = DeepSort(max_age=30)
 face_app = FaceAnalysis(name='buffalo_l', providers=['CPUExecutionProvider'])
 face_app.prepare(ctx_id=0, det_size=(640, 640))
 
-# Load FairFace model for race classification
+# Load FairFace for race classification
 fairface_model = models.resnet34()
 num_ftrs = fairface_model.fc.in_features
 fairface_model.fc = torch.nn.Linear(num_ftrs, 18)
